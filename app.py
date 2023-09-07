@@ -1,20 +1,14 @@
+import os
 from flask import Flask, render_template, abort
 from pymongo import MongoClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def create_app():
     app = Flask(__name__)
-    client = MongoClient("mongodb+srv://empressecho:nTrhU0gUypy5nXWJ@portfolio-site.6ev04wl.mongodb.net/")
+    client = MongoClient(os.getenv("MONGODB_URI"))
     app.db = client.portfolio
-
-
-# {
-#     "title": "Hoard",
-#     "navtitle": "hoard-game",
-#     "thumbnail": "images/hoard-banner.png",
-#     "categories": ["web", "javascript"],
-#     "about": "temp",
-#     "technologies": ["HTML", "CSS", "Javascript"]
-# }
 
     projects_list = [e for e in app.db.projects.find({})]
     project_nav_index = {project['navtitle']: project for project in projects_list}
