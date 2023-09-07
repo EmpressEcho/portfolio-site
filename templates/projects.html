@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+{% endblock %}
+{% block content %}
+    <section class="projects">
+        {% for project in projects %}
+        <a class="project-card" href="{{ url_for('project', project_name=project['navtitle']) }}">
+            <article>
+                <img class="project-card-image",
+                    src="{{ url_for('static', filename=project['thumbnail'])}}",
+                    alt="{{ project['title'] }} thumbnail"/>
+                <header>
+                    <h2 class="project-card-title">{{ project['title'] }}</h2>
+                    <ul>
+                        {% for cat in project['categories'] %}
+                        <li class="project-card-category">{{ cat }}</li>
+                        {% endfor %}
+                    </ul>
+                </header>
+            </article>
+        </a>
+        {% endfor %}
+    </section>
+{% endblock %}

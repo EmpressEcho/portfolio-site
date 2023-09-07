@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/static/css/home.css"/>
+{% endblock %}
+{% block content %}
+    <section class="intro-section">
+        <h3>Who am I?</h3>
+        <p>Hey there, I'm Echo. I'm a Software Developer, specializing in Python. I also have experience with various other technologies involving cybersecurity, web design, databases, REST APIs, and containerization. I have experience working with global markets and large teams as well as smaller products and projects. When I'm not working on software I'm writing, playing Dungeons & Dragons, or out exploring nature!</p>
+    </section>
+    <section class="carousel-section">
+        <h3>Check out some of my projects!</h3>
+        <div class="carousel">
+            <ol class="carouselvp">
+                <li class="carousel-slide" id="slide1">
+                    <a href="#slide2" class="prev-button">
+                        <div class="prev-icon"></div>
+                    </a>
+                    <div class="slide-banner" id="slide1-banner"></div>
+                    <div class="slide-caption" id="slide1-caption">
+                        <h4>Hoard</h4>
+                        <p>Hoard is an idle browser game I designed and built from scratch. It uses HTML, CSS, and Javascript for the front-end, Javascript to manage the functionality of the gameplay, and <b>ADD DATABASES</b>.<br/>If you've ever played Cookie Clicker, it's a bit like that, but with more of a fantasy twist, inspired by my love of D&D and fantasy in general.</p>
+                        <a href="https://hoard.echorose.co.uk">You can play it here!</a>
+                    </div>
+                    <a href="#slide2" class="next-button">
+                        <div class="next-icon"></div>
+                    </a>
+                </li>
+                <li class="carousel-slide" id="slide2">
+                    <a href="#slide1" class="prev-button">
+                        <div class="prev-icon"></div>
+                    </a>
+                    <div class="slide-banner" id="slide2-banner"></div>
+                    <div class="slide-caption" id="slide2-caption">
+                        <h4>This website!</h4>
+                        <p>I designed and put together this website from scratch, using HTML, CSS, Flask and Jinja2 for the frontend design and templating, and MongoDB for the backend database.<br>It's useful as a place to keep all my projects and so that I can show them off!</p>
+                    </div>
+                    <a href="#slide1" class="next-button">
+                        <div class="next-icon"></div>
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,39 @@
+main {
+    text-align: center;
+    min-height: 476px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    margin-left: 330px;
+}
+
+li p {
+    padding: 0 0 0 25px;
+}
+
+li img {
+    margin-top: 7px;
+}
+
+#email-icon {
+    width: 35px;
+    height: 35px;
+}
+
+#linkedin-icon {
+    width: 35px;
+    height: 35px;
+}
+
+main a {
+    color: #6f8a91;
+    text-decoration: none;
+}
+
+main a:hover {
+    border-bottom: 2px solid #6f8a91;
+    color: #60939f;
+    font-weight: bold;
+}

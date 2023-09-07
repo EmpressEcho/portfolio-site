@@ -1,0 +1,48 @@
+main {
+    display: flex;
+    margin-top: 25px;
+}
+
+.content-flex {
+    width: 800px;
+}
+
+p {
+    padding: 0 50px;
+}
+
+.content-flex a {
+    text-decoration: none;
+    color: #374548;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.content-flex a:hover {
+    background-color: #6f8a91;
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+}
+
+.project-image {
+    width: 200px;
+    border: 1px solid #6f8a91;
+}
+
+h3 {
+    text-align: center;
+    border-bottom: 2px solid #6f8a91;
+}
+
+ul {
+    padding: 0;
+}
+
+.technology-item {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title or "Portfolio" }} - Echo De Winter</title>
+        <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/style.css"/>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="header-contents">
+                <a href="{{ url_for('home') }}">
+                    <img class="profile" src="/static/images/pfp.svg" alt="The website logo" />
+                </a>
+                <div class="header-title">
+                    <h1 class="header-title-name">Echo De Winter</h1>
+                    <h1 class="header-title-portfolio">{{ title or "Portfolio" }}</h1>
+                </div>
+                <div class="header-links">
+                    <a class="header-link{{ ' active' if active == 'projects' else '' }}" href="{{ url_for('projects') }}">Projects</a>
+                    <a class="header-link{{ ' active' if active == 'about' else '' }}" href="{{ url_for('about') }}">About Me</a>
+                    <a class="header-link{{ ' active' if active == 'contact' else '' }}" href="{{ url_for('contact') }}">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main>
+        {% block content %}
+        {% endblock %}
+        </main>
+        <footer>
+            <div class="footer-contents">
+                
+            </div>
+        </footer>
+    </body>
+</html>

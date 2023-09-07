@@ -1,0 +1,42 @@
+main {
+    display: flex;
+    margin-top: 25px;
+}
+
+.bio-section {
+    width: 800px;
+}
+
+p {
+    padding: 0 50px;
+}
+
+.photo {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    border: 2px solid #6f8a91;
+    border-radius: 25%;
+}
+
+.sidebar h3 {
+    text-align: center;
+    border-bottom: 2px solid #6f8a91;
+}
+
+.certification-badge {
+    height: 150px;
+    width: 150px;
+    margin-left: 50px;
+}
+
+main a {
+    color: #6f8a91;
+    text-decoration: none;
+}
+
+main a:hover {
+    border-bottom: 2px solid #6f8a91;
+    color: #60939f;
+    font-weight: bold;
+}

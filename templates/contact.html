@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/static/css/contact.css"/>
+{% endblock %}
+{% block content %}
+    <p>You can get in touch with me via the below methods.</p>
+    <ul>
+        <li id="email">
+            <img id="email-icon" src="/static/images/email-icon.svg"/>
+            <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+        </li>
+        <li id="linkedin">
+            <img id="linkedin-icon" src="/static/images/linkedin-icon.svg"/>
+            <p>LinkedIn: <a href="{{ linkedin }}">Echo De Winter</a></p>
+        </li>
+    </ul>
+{% endblock %}
